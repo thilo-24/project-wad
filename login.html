@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  
+  <style>
+  
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ff6347;
+}
+  
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(images/login2.jpeg);
+      background-size: cover;
+    
+    /* Center the background image */
+    background-position: center;
+    
+    /* Set background to fixed so it doesn't scroll with content */
+    background-attachment: fixed;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form {
+      max-width: 600px; /* Increased width for the table */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form table {
+      width: 100%;
+    }
+
+    .form table tr td {
+      padding: 10px;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"],
+    .form input[type="date"],
+    .form input[type="number"],
+    .form input[type="radio"],
+    .form input[type="checkbox"] {
+      width: calc(100% - 20px); /* Adjusted width to fit within the table */
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .form button {
+      width: 100%;
+      margin-top: 10px; /* Added margin to separate button from other inputs */
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #0056b3;
+    }
+
+    .form p {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+	
+         footer {
+          background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+  </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <img src="https://via.placeholder.com/150x50" alt="Foodie Express Logo" class="img-responsive">
+    </div>
+	
+    <b><nav class="navbar" align="justify">
+        <a href="file:///E:/WAD/project%20WAD/homepage.html">Home</a>
+		<a href="file:///E:/WAD/project%20WAD/login.html">login</a>
+        <a href="file:///E:/WAD/project%20WAD/menu.html">Menu</a>
+        <a href="file:///E:/WAD/project%20WAD/aboutus.html">About Us</a>
+        <a href="file:///E:/WAD/project%20WAD/contactus.html">Contact Us</a>
+		
+    </nav></b>
+    <div class="icons">
+       <div id="login-btn"><b>☞</b></div>
+    </div>
+</header>
+<br>
+<br>
+
+  <div class="container">
+    <div id="login" class="form">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+      </form>
+    </div>
+
+    <div id="signup" class="form hidden">
+      <h1>SIGNUP NOW</h1>
+      <form id="form1" name="form1" method="post" action="">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>Full Name</td>
+            <td><input type="text" name="txtFullName" id="txtFullName" required></td>
+          </tr>
+          <tr>
+            <td>Email Address</td>
+            <td><input type="text" name="txtEmail" id="txtEmail" required></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="txtPassword" id="txtPassword" required></td>
+          </tr>
+          <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" name="txtConfirmPassword" id="txtConfirmPassword" required></td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td><input type="date" name="txtDate" id="txtDate" required></td>
+          </tr>
+          
+          <tr>
+            <td>Contact Number</td>
+            <td><input type="text" name="txtContact" id="txtContact" required></td>
+          </tr>
+         
+          <tr>
+            <td>Email me the latest updates</td>
+            <td><input type="checkbox" name="chkEmailMe" id="chkEmailMe"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="submit" name="btnSubmit" id="btnSubmit">Submit</button>
+              <button type="reset" name="btnReset" id="btnReset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loginForm = document.getElementById("login");
+      const signupForm = document.getElementById("signup");
+      const loginLink = document.getElementById("loginLink");
+      const signupLink = document.getElementById("signupLink");
+
+      loginLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior
+        loginForm.classList.remove("hidden");
+        signupForm.classList.add("hidden");
+      });
+
+      signupLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior
+        loginForm.classList.add("hidden");
+        signupForm.classList.remove("hidden");
+      });
+    });
+  </script>
+</body>
+<br>
+<br>
+<br>
+<br>
+ <footer>
+        <p>&copy; 2024 Food Delivery App</p>
+    </footer>
+</html>
