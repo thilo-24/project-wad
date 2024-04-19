@@ -1,56 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet" href="./topbar.css">
+        
+
     <style>
         /* Global styles */
-		
-                .header {
-                    background-color:white;
-                    padding: 20px 0;
-                    box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                .logo img {
-                    height: 50px;
-                    width: auto;
-                }
-
-                .navbar {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-top: 20px;
-                }
-
-                .navbar a {
-                    text-decoration: none;
-                    color: #333;
-                    margin: 0 20px;
-                    font-size: 18px;
-                }
-
-                .navbar a:hover {
-                    color: #ff6347;
-                }
-		
+        .header{
+            top: -1px !important;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-image: url('images/menu.jpg');
             background-size: cover;
-    
-                /* Center the background image */
-                background-position: center;
-                
-                /* Set background to fixed so it doesn't scroll with content */
-                background-attachment: fixed;
+
+            /* Center the background image */
+            background-position: center;
+
+            /* Set background to fixed so it doesn't scroll with content */
+            background-attachment: fixed;
         }
 
         footer {
@@ -64,7 +39,9 @@
             padding: 20px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             margin-bottom: 10px;
         }
 
@@ -75,62 +52,84 @@
         .menu-items {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center align menu items */
+            justify-content: center;
+            /* Center align menu items */
         }
 
         .menu-item {
-            width: calc(30% - 20px); /* Adjust based on the number of items per row */
-            margin: 10px; /* Add margin around each menu item */
-            background-color: #f9f9f9; /* Add background color for menu item */
-            border: 1px solid #ddd; /* Add border for menu item */
-            border-radius: 5px; /* Add border radius for rounded corners */
-            padding: 10px; /* Add padding for spacing */
+            width: calc(30% - 20px);
+            /* Adjust based on the number of items per row */
+            margin: 10px;
+            /* Add margin around each menu item */
+            background-color: #f9f9f9;
+            /* Add background color for menu item */
+            border: 1px solid #ddd;
+            /* Add border for menu item */
+            border-radius: 5px;
+            /* Add border radius for rounded corners */
+            padding: 10px;
+            /* Add padding for spacing */
         }
 
         .menu-item img {
             width: 100%;
             height: auto;
-            border-radius: 5px; /* Add border radius for rounded corners */
+            border-radius: 5px;
+            /* Add border radius for rounded corners */
         }
 
         .menu-item h3 {
             margin-top: 10px;
-            margin-bottom: 5px; /* Adjust margin bottom for spacing */
+            margin-bottom: 5px;
+            /* Adjust margin bottom for spacing */
         }
 
         .menu-item p {
             margin-bottom: 10px;
-            font-size: 14px; /* Adjust font size for description */
+            font-size: 14px;
+            /* Adjust font size for description */
         }
 
         .menu-item span {
             font-weight: bold;
-            font-size: 16px; /* Adjust font size for price */
+            font-size: 16px;
+            /* Adjust font size for price */
         }
 
         /* Footer styles */
         /* Add styles for footer here */
     </style>
 </head>
+
 <body>
-    <header class="header">
-    <div class="logo">
-        <img src="https://via.placeholder.com/150x50" alt="Foodie Express Logo" class="img-responsive">
+
+    <div class="header">
+    
+        <div class="logo">
+            <img src="./images/foodie.jpg" alt="Foodie Express Logo" class="img-responsive" style="border-radius: 20px;">
+        </div>
+    
+        <div class="main-nav">
+            <b>
+                <nav class="navbar" align="justify">
+                    <a href="./homepage.html" class="hover-underline-animation">Home</a>
+                    <a href="./menu.html" class="hover-underline-animation">Menu</a>
+                    <a href="./aboutus.html" class="hover-underline-animation">About Us</a>
+                    <a href="./contactus.html" class="hover-underline-animation">Contact Us</a>
+                </nav>
+            </b>
+        </div>
+    
+        <div class="icons">
+            <a href="./login.html" style="text-decoration:none;">
+                <div id="login-btn"><b>Login</b></div>
+            </a>
+        </div>
+    
     </div>
-	
-    <b><nav class="navbar" align="justify">
-        <a href="file:///E:/WAD/project%20WAD/homepage.html">Home</a>
-		<a href="file:///E:/WAD/project%20WAD/login.html">login</a>
-        <a href="file:///E:/WAD/project%20WAD/menu.html">Menu</a>
-        <a href="file:///E:/WAD/project%20WAD/aboutus.html">About Us</a>
-        <a href="file:///E:/WAD/project%20WAD/contactus.html">Contact Us</a>
-		
-    </nav></b>
-    <div class="icons">
-       <div id="login-btn"><b>☞</b></div>
-    </div>
-</header>
-    <main>
+
+
+    <div class="container">
         <section class="menu-category">
             <h2>foods</h2>
             <div class="menu-items">
@@ -140,31 +139,31 @@
                     <p>Description of Starter 1</p>
                     <span>$10</span>
                 </div>
-				 <div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/2.jpg" alt="Starter 1">
                     <h3>Starter 1</h3>
                     <p>Description of Starter 1</p>
                     <span>$10</span>
                 </div>
-				 <div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/3.jpeg" alt="Starter 1">
                     <h3>Starter 1</h3>
                     <p>Description of Starter 1</p>
                     <span>$10</span>
                 </div>
-				 <div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/4.webp" alt="Starter 1">
                     <h3>Starter 1</h3>
                     <p>Description of Starter 1</p>
                     <span>$10</span>
                 </div>
-				 <div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/5.jpg" alt="Starter 1">
                     <h3>Starter 1</h3>
                     <p>Description of Starter 1</p>
                     <span>$10</span>
                 </div>
-				 <div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/6.jpeg" alt="Starter 1">
                     <h3>Starter 1</h3>
                     <p>Description of Starter 1</p>
@@ -183,89 +182,90 @@
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-				<div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/2.jpg" alt="Main Course 1">
                     <h3>deserts 1</h3>
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-				<div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/d3.jpeg" alt="Main Course 1">
                     <h3>deserts 1</h3>
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-				<div class="menu-item">
+                <div class="menu-item">
                     <img src="image/menu/d4.jpeg" alt="Main Course 1">
                     <h3>deserts 1</h3>
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-				<div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/d6.webp" alt="Main Course 1">
                     <h3>deserts 1</h3>
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-				<div class="menu-item">
+                <div class="menu-item">
                     <img src="images/menu/d5.jpg" alt="Main Course 1">
                     <h3>deserts 1</h3>
                     <p>Description of Main Course 1</p>
                     <span>$15</span>
                 </div>
-			
-                <!-- Add more main course items as needed -->
-            </div>
-			
-			
-        <section class="menu-category">
-            <h2>beaverages</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>beaverage 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				<div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>deserts 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				<div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>deserts 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				<div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>deserts 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				<div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>deserts 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				<div class="menu-item">
-                    <img src="placeholder.jpg" alt="Main Course 1">
-                    <h3>deserts 1</h3>
-                    <p>Description of Main Course 1</p>
-                    <span>$15</span>
-                </div>
-				
-                <!-- Add more main course items as needed -->
-            </div>
-        </section>
 
-        <!-- Add more sections for other categories like desserts, beverages, etc. -->
-    </main>
-     <footer>
+                <!-- Add more main course items as needed -->
+            </div>
+
+
+            <section class="menu-category">
+                <h2>beaverages</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>beaverage 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>deserts 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>deserts 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>deserts 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>deserts 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="placeholder.jpg" alt="Main Course 1">
+                        <h3>deserts 1</h3>
+                        <p>Description of Main Course 1</p>
+                        <span>$15</span>
+                    </div>
+
+                    <!-- Add more main course items as needed -->
+                </div>
+            </section>
+
+            <!-- Add more sections for other categories like desserts, beverages, etc. -->
+    </div>
+    <footer>
         <p>&copy; 2024 Food Delivery App</p>
     </footer>
 </body>
+
 </html>

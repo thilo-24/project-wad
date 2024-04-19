@@ -11,6 +11,7 @@ body {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
+    margin: 0;
 }
 
 .container {
@@ -172,4 +173,204 @@ footer {
     background-size: cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the image within the container */
 }
+
+
+        .header {
+			background-color: #fff;
+			padding: 10px 0;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			position: fixed;
+			width: 100%;
+			z-index: 11;
+		}
+
+
+		.logo img {
+			height: 60px;
+			width: auto;
+		}
+
+		.navbar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.navbar a {
+			text-decoration: none;
+			color: #333;
+			margin: 0 20px;
+			font-size: 18px;
+		}
+
+		.navbar a:hover {
+			color: #ff6347;
+		}
+
+		.hover-underline-animation {
+			display: inline-block;
+			position: relative;
+			color: #FF512F;
+		}
+
+		.hover-underline-animation::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: #FF512F;
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-out;
+		}
+
+		.hover-underline-animation:hover::after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url(images/login2.jpeg);
+			background-size: cover;
+
+			/* Center the background image */
+			background-position: center;
+
+			/* Set background to fixed so it doesn't scroll with content */
+			background-attachment: fixed;
+
+			margin: 0;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			
+		}
+
+		.form {
+			max-width: 600px;
+			/* Increased width for the table */
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+
+			background: rgba(255, 255, 255, 0.25);
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			z-index: 10;
+		}
+
+		.form h1 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.form table {
+			width: 100%;
+		}
+
+		.form table tr td {
+			padding: 10px;
+		}
+
+		.form input[type="text"],
+		.form input[type="password"],
+		.form input[type="date"],
+		.form input[type="number"],
+		.form input[type="radio"],
+		.form input[type="checkbox"] {
+			width: calc(100% - 20px);
+			/* Adjusted width to fit within the table */
+			padding: 8px;
+			box-sizing: border-box;
+		}
+
+		.form button {
+			width: 100%;
+			margin-top: 10px;
+			/* Added margin to separate button from other inputs */
+			padding: 10px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+
+		.form button:hover {
+			background-color: #0056b3;
+		}
+
+		.form p {
+			text-align: center;
+			margin-top: 15px;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		#login-btn {
+
+			padding: 10px 30px;
+			text-align: center;
+			text-transform: uppercase;
+			transition: 0.5s;
+			background-size: 200% auto;
+			color: white;
+			border-radius: 10px;
+			display: block;
+			border: 0px;
+			font-weight: 700;
+			box-shadow: 0px 0px 14px -7px #f09819;
+			background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+			cursor: pointer;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+
+		}
+
+		#login-btn:hover {
+			background-position: right center;
+			/* change the direction of the change here */
+			color: #fff;
+			text-decoration: none;
+		}
+
+		#login-btn:active {
+			transform: scale(0.95);
+		}
+
+		.form__field {
+			font-family: inherit;
+			width: 100%;
+			border: 0;
+			border-bottom: 2px solid;
+			outline: 0;
+			font-size: 1rem;
+			color: black;
+			padding: 7px 0;
+			background: transparent;
+			transition: border-color 0.2s;
+		}
+
 

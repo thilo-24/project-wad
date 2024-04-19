@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="./topbar.css">
+    <link rel="stylesheet" href="./style.css">
+
     <style>
         /* Global styles */
         body {
@@ -13,51 +17,21 @@
             background-color: #f9f9f9;
             background-image: url(images/home2.jpeg);
             background-size: cover;
-    
-    /* Center the background image */
-    background-position: center;
-    
-    /* Set background to fixed so it doesn't scroll with content */
-    background-attachment: fixed;
+
+            /* Center the background image */
+            background-position: center;
+
+            /* Set background to fixed so it doesn't scroll with content */
+            background-attachment: fixed;
         }
 
-        .header {
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 20px;
-            font-size: 18px;
-        }
-
-        .navbar a:hover {
-            color: #ff6347;
-        }
 
         main {
             padding: 20px;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             margin-bottom: 10px;
             color: #333;
         }
@@ -90,8 +64,10 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            flex: 1 0 200px; /* Flexbox item properties */
-            max-width: 300px; /* Max width to avoid stretching */
+            flex: 1 0 200px;
+            /* Flexbox item properties */
+            max-width: 300px;
+            /* Max width to avoid stretching */
         }
 
         .team-member img {
@@ -116,58 +92,78 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
-            position: absolute; /* Position the footer at the bottom */
-            width: 100%; /* Full width */
-            bottom: 0; /* Stick to the bottom */
+            position: absolute;
+            /* Position the footer at the bottom */
+            width: 100%;
+            /* Full width */
+            bottom: 0;
+            /* Stick to the bottom */
         }
     </style>
 </head>
-<body>
-<header class="header">
-    <div class="logo">
-        <img src="https://via.placeholder.com/150x50" alt="Foodie Express Logo" class="img-responsive">
-    </div>
-    <nav class="navbar"><b>
-        <a href="file:///E:/WAD/project%20WAD/homepage.html">Home</a>
-        <a href="file:///E:/WAD/project%20WAD/login.html">Login</a>
-        <a href="file:///E:/WAD/project%20WAD/menu.html">Menu</a>
-        <a href="file:///E:/WAD/project%20WAD/aboutus.html">About Us</a>
-        <a href="file:///E:/WAD/project%20WAD/contactus.html">Contact Us</a>
-    </b>
-    </nav>
-    <div class="icons">
-        <div id="login-btn">☞</div>
-    </div>
-</header>
-<main>
-    <section class="about-section">
-        <h2>Our Story</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et massa non nunc scelerisque eleifend. Aliquam erat volutpat.</p>
-        <p>Proin consequat velit id risus convallis, nec fermentum dui tristique. Fusce consequat massa at tortor hendrerit, eu fermentum neque condimentum. Suspendisse ullamcorper sit amet arcu eget facilisis. Phasellus varius, metus et gravida tristique, nulla metus tincidunt turpis, a tempor nunc eros et lectus. In consequat velit sit amet leo malesuada dignissim. Integer dictum neque vel enim convallis, et tincidunt arcu ultricies.</p>
-    </section>
 
-    <section class="team-section">
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./images/foodie.jpg" alt="Foodie Express Logo" class="img-responsive" style="border-radius: 20px;">
+        </div>
+    
+        <div class="main-nav">
+            <b>
+                <nav class="navbar" align="justify">
+                    <a href="./homepage.html" class="hover-underline-animation">Home</a>
+                    <a href="./menu.html" class="hover-underline-animation">Menu</a>
+                    <a href="./aboutus.html" class="hover-underline-animation">About Us</a>
+                    <a href="./contactus.html" class="hover-underline-animation">Contact Us</a>
+                </nav>
+            </b>
+        </div>
+    
+        <div class="icons">
+            <a href="./login.html" style="text-decoration:none;">
+                <div id="login-btn"><b>Login</b></div>
+            </a>
+        </div>
+    
+    </div>
+
+    <div class="container" style="flex-direction: column;">
+        <div class="about-section">
+            <h2>Our Story</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et massa non nunc scelerisque eleifend.
+                Aliquam erat volutpat.</p>
+            <p>Proin consequat velit id risus convallis, nec fermentum dui tristique. Fusce consequat massa at tortor
+                hendrerit, eu fermentum neque condimentum. Suspendisse ullamcorper sit amet arcu eget facilisis.
+                Phasellus varius, metus et gravida tristique, nulla metus tincidunt turpis, a tempor nunc eros et
+                lectus. In consequat velit sit amet leo malesuada dignissim. Integer dictum neque vel enim convallis, et
+                tincidunt arcu ultricies.</p>
+        </div>
+
         <h2>Our Team</h2>
-        <div class="team-member">
-            <img src="team_member1.jpg" alt="Team Member 1">
-            <h3>John Doe</h3>
-            <p>CEO</p>
+
+        <div class="team-section" style="width: 100%;">
+            
+            <div class="team-member">
+                <img src="team_member1.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="team_member2.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>CTO</p>
+            </div>
+            <div class="team-member">
+                <img src="team_member3.jpg" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>Marketing Manager</p>
+            </div>
+            <!-- Add more team members as needed -->
         </div>
-        <div class="team-member">
-            <img src="team_member2.jpg" alt="Team Member 2">
-            <h3>Jane Smith</h3>
-            <p>CTO</p>
-        </div>
-        <div class="team-member">
-            <img src="team_member3.jpg" alt="Team Member 3">
-            <h3>Mike Johnson</h3>
-            <p>Marketing Manager</p>
-        </div>
-        <!-- Add more team members as needed -->
-    </section>
-</main>
-<footer>
-    <p>&copy; 2024 Food Delivery App </p>
-</footer>
+    </div>
+    <footer>
+        <p>&copy; 2024 Food Delivery App </p>
+    </footer>
 </body>
+
 </html>
